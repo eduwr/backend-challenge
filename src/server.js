@@ -1,10 +1,14 @@
-import { ApolloServer } from 'apollo-server';
-import ExoplanetsAPI from './datasources/ExoplanetsAPI';
-import resolvers from './graphQL/resolvers';
-import typeDefs from './graphQL/schema';
-import Station from './models/Station';
+const { ApolloServer } = require('apollo-server');
+const ExoplanetsAPI = require('./datasources/ExoplanetsAPI');
+const resolvers = require('./graphQL/resolvers');
+const typeDefs = require('./graphQL/schema');
+const Station = require('./models/Station');
 
-import './database';
+require('./database');
+
+require('dotenv').config({
+  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
+});
 
 const dataSources = () => ({
   exoplanetsAPI: new ExoplanetsAPI(),
@@ -27,7 +31,7 @@ server.listen().then(({ url }) => {
 
 // For e2e integration test purposes only
 
-const pieces = {
+module.exports = {
   dataSources,
   context,
   typeDefs,
@@ -35,6 +39,5 @@ const pieces = {
   ApolloServer,
   ExoplanetsAPI,
   server,
+  Station,
 };
-
-export default pieces;

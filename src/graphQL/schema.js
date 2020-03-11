@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server';
+const { gql } = require('apollo-server');
 
 const typeDefs = gql`
   type Exoplanet {
@@ -32,4 +32,4 @@ const typeDefs = gql`
   }
 `;
 
-export default typeDefs;
+module.exports = typeDefs;

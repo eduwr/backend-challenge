@@ -4,8 +4,11 @@
   "description": "",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "jest",
-    "dev": "nodemon src/server.js"
+    "start": "node src/server",
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "repository": {
     "type": "git",
@@ -39,6 +42,7 @@
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
+    "sqlite3": "^4.1.1",
     "sucrase": "^3.12.1"
   }
 }
