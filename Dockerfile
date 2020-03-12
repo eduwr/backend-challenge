@@ -1,12 +1,11 @@
 FROM node:alpine
 
-WORKDIR /home/eduardo/docker
+WORKDIR /user/app
 
 COPY package*.json ./
 RUN npm install
 
-COPY . . 
+COPY . .
+
 
 EXPOSE 4000
-
-CMD ["npm", "start"]
