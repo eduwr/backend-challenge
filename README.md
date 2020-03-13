@@ -39,7 +39,7 @@ docker-compose up
 
 O docker-compose foi configurado para criar um container com banco de dados [PostgreSQL](https://hub.docker.com/_/postgres) e um servidor [Apollo](https://www.apollographql.com/) com Node rodando na porta 4000. Portanto as variáveis de ambiente no arquivo .env já estão configuradas para que tudo funcione automaticamente.
 
-O banco de dados foi configurado para não persistir os dados após o conteiner parar, portanto não recomendamos utilizar esse método em produção.
+> Nota: O banco de dados foi configurado para não persistir os dados após o conteiner parar, portanto não recomendamos utilizar esse método em produção.
 
 
 ## Inicialização Local
@@ -51,7 +51,7 @@ O banco de dados foi configurado para não persistir os dados após o conteiner 
 
 ### Inicialização
 
-Clone este repositório no diretório desejado com o comando a baixo no terminal:
+Clone este repositório no diretório desejado com o comando a baixo:
 
 ```bash
 git clone https://github.com/eduwr
@@ -72,7 +72,7 @@ DB_NAME=<seu_banco_de_dados>
 API_HOST=localhost
 ```
 
-Obs: Esta aplicação utiliza um ORM para integração com o PostgreSQL, para utilizar outros bancos deve-se configurar o arquivo de configuração do banco de dados no diretório src/config e adicionar as dependências necessárias, conforme a documentação do [Sequelize](https://sequelize.org/v5/manual/dialects.html).
+> Obs: Esta aplicação utiliza um ORM para integração com o PostgreSQL, caso deseje utilizar outro banco de dados. Deve-se configurar o arquivo src/config/database.js e adicionar as dependências necessárias, conforme recomenda a documentação do [Sequelize](https://sequelize.org/v5/manual/dialects.html).
 
 Instale as dependências com o comando a baixo na raiz do projeto.
 
@@ -84,13 +84,13 @@ Inicie o projeto
 ```bash
 npm start
 ```
-Esta documentação está utilizando o npm, mas o yarn também funcionará. Você pode comparar as equivalências dos comandos na [documentação do yarn](https://classic.yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison).
+> Esta documentação utiliza o npm, mas também é possível utilizar o yarn. Você pode comparar as equivalências dos comandos na [documentação do yarn](https://classic.yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison).
 
 Execute as migrações para o banco de dados.
 ```bash
 npx sequelize db:migrate
 ```
-Isso faz com que o banco de dados e as tabelas sejam criadas com base no arquivo de configuração do banco de dados.
+>Isso faz com que o banco de dados e as tabelas sejam criadas com base no arquivo de configuração do banco de dados.
 
 Inicie o servidor:
 ```bash
