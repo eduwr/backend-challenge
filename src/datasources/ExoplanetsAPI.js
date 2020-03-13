@@ -1,4 +1,4 @@
-const { RESTDataSource } = require('apollo-datasource-rest');
+import { RESTDataSource } from 'apollo-datasource-rest';
 
 class ExoplanetsAPI extends RESTDataSource {
   constructor() {
@@ -34,4 +34,4 @@ class ExoplanetsAPI extends RESTDataSource {
   }
 }
 
-module.exports = ExoplanetsAPI;
+export default ExoplanetsAPI;

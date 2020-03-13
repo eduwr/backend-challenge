@@ -3,16 +3,15 @@ version: "3.7"
 services:
     db:
         image: postgres:9.6.17-alpine
-        container_name: psql-container-backendchallenge
+        container_name: psql-container
         environment: 
             POSTGRES_USER: backendchallenge
             POSTGRES_PASSWORD: backendchallenge
     app:
-        build: .
-        entrypoint: 
-            - "./entrypoint.sh"
+        working_dir: /usr/app
+        entrypoint: ["/bin/bash", "./docker-entrypoint.sh"]
+        image: node:10-slim
         container_name: backendchallenge
-        command: npm start
         ports:
             - "4000:4000"
         env_file:
