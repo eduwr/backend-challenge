@@ -1,6 +1,6 @@
 # Backend Challenge
 
-API GraphQL que utiliza a API da [Arcsecond](https://api.arcsecond.io/swagger/) para descobrir planetas adequados à instalação de novos postos de carregamento de veículos com propulsão de íons.
+API GraphQL que utiliza a API da [Arcsecond](https://api.arcsecond.io/swagger/) para descobrir exoplanetas adequados à instalação de novos postos de carregamento de veículos com propulsão de íons.
 
 *Outras Línguas:* [*English*](https://github.com/eduwr/backend-challenge/blob/master/README.en.md)
 
