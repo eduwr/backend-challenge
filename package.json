@@ -24,7 +24,6 @@
     "apollo-server-express": "^2.11.0",
     "apollo-server-testing": "^2.11.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "graphql": "^14.6.0",
     "pg": "^7.18.2",
     "pg-hstore": "^2.3.3",
@@ -39,7 +38,6 @@
     "eslint-plugin-prettier": "^3.1.2",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
-    "sqlite3": "^4.1.1",
     "sucrase": "^3.12.1"
   }
 }
