@@ -39,7 +39,7 @@ docker-compose up
 
 O docker-compose foi configurado para criar um container com banco de dados [PostgreSQL](https://hub.docker.com/_/postgres) e um servidor [Apollo](https://www.apollographql.com/) com Node rodando na porta 4000. Portanto as variáveis de ambiente no arquivo .env já estão configuradas para que tudo funcione automaticamente.
 
-> Nota: O banco de dados foi configurado para não persistir os dados após o conteiner parar, portanto não recomendamos utilizar esse método em produção.
+> Nota: O banco de dados foi configurado para não persistir os dados após o container parar, portanto não recomendamos utilizar esse método em produção.
 
 
 ## Inicialização Local
