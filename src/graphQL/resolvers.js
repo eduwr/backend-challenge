@@ -20,6 +20,25 @@ const resolvers = {
       const planet = await dataSources.exoplanetsAPI.getExoplanetByName(name);
       return planet;
     },
+    allStations: async (parent, args, { Station }) => {
+      const response = await Station.findAll({
+        attributes: ['id', 'name', 'mass'],
+      });
+
+      const allStations = response.map(data => data.dataValues);
+
+      return {
+        message: allStations
+          ? `[${allStations.length}] stations found`
+          : "We don't have operational stations",
+        stations: allStations,
+      };
+    },
+    findStationByID: async (parent, { id }, { Station }) => {
+      const station = Station.findByPk(id);
+      console.log(station);
+      return station;
+    },
   },
   Mutation: {
     installStation: async (parent, { name }, { dataSources, Station }) => {
@@ -36,6 +55,15 @@ const resolvers = {
         : `Alert! The planet ${name} already has a fully operational station!`;
 
       return { success: created, message, exoplanet: station };
+    },
+
+    destroyStation: async (parent, { id }, { Station }) => {
+      const response = await Station.destroy({ where: { id } });
+      const message = response
+        ? `Station ${id} became stardust!`
+        : `Station ${id} does not exist!`;
+      const success = !!response;
+      return { message, success };
     },
   },
   Exoplanet: {

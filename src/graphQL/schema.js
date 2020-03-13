@@ -18,6 +18,22 @@ const typeDefs = gql`
     suitablePlanets: [Exoplanet!]
   }
 
+  type Station {
+    id: ID!
+    name: String!
+    mass: Int!
+  }
+
+  type allStationsResponse {
+    message: String!
+    stations: [Station]
+  }
+
+  type destroyStationResponse {
+    message: String!
+    success: Boolean!
+  }
+
   type Query {
     exoplanet(name: String!): Exoplanet!
     suitablePlanets(
@@ -25,10 +41,13 @@ const typeDefs = gql`
       pageSize: Int
       numberOfPages: Int
     ): suitablePlanetsResponse!
+    allStations: allStationsResponse!
+    findStationByID(id: ID!): Station
   }
 
   type Mutation {
     installStation(name: String!): installStationResponse!
+    destroyStation(id: ID!): destroyStationResponse!
   }
 `;
 
