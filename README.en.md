@@ -42,7 +42,7 @@ This docker-compose was set to create a [PostgreSQL](https://hub.docker.com/_/po
 > Note: The data base setting doesn't persist data after the container stops. Thus we don't recommend to use this method in production.
 
 
-## Local initialization
+## Getting Started Locally
 
 ### Prerequisites
 
