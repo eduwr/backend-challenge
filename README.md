@@ -35,7 +35,7 @@ No diretório em que o repositório foi clonado inicie o banco de dados e o serv
 ```bash
 docker-compose up
 ```
-(obs: no linux pode ser que seja necessário privilégio administrativo usando sudo)
+> obs: no linux pode ser que seja necessário privilégio administrativo usando sudo
 
 O docker-compose foi configurado para criar um container com banco de dados [PostgreSQL](https://hub.docker.com/_/postgres) e um servidor [Apollo](https://www.apollographql.com/) com Node rodando na porta 4000. Portanto as variáveis de ambiente no arquivo .env já estão configuradas para que tudo funcione automaticamente.
 
