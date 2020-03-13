@@ -4,7 +4,7 @@ API GraphQL que utiliza a API da [Arcsecond](https://api.arcsecond.io/swagger/) 
 
 *Outras Línguas:* [*English*](https://github.com/eduwr/backend-challenge/blob/master/README.en.md)
 
-## Instalação com docker-compose
+## Inicialização com docker-compose
 
 
 ### Pré-requisitos
