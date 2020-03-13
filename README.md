@@ -346,7 +346,7 @@ __2.__ __destroyStation__*(id: **_ID!_**)*
 
 Remove uma estação do banco de dados.
 
-> Retorna uma resposta informando se a destruição foi concluída com sucesso ou se houve falha no processo.
+> Retorna uma resposta informando se a remoção foi concluída com sucesso ou se houve falha no processo.
 
 Parâmetros:
 - __id__: id da estação no banco de dados. Obrigatório.
@@ -366,7 +366,7 @@ mutation {
 
 __Retorno__
 
-* Destruição bem sucedida
+* Remoção bem sucedida
 
 ```JSON
 {
@@ -379,7 +379,7 @@ __Retorno__
 }
 ```
 
-* Destruição não realizada
+* Remoção não realizada
 
 ```JSON
 {
