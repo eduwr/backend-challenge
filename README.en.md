@@ -21,7 +21,7 @@ Clone this repository.
 git clone https://github.com/eduwr/
 ```
 
-Certify [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) installation.
+Certify if [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) are installed.
 
 ```bash
 $ docker -v
@@ -84,7 +84,7 @@ Start the project
 ```bash
 npm start
 ```
-> Note: Jest documentation uses yarn commands, but npm will also work. You can compare yarn and npm commands in the [yarn docs, here](https://classic.yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison).
+> Note: This documentation uses yarn commands, but npm will also work. You can compare yarn and npm commands in the [yarn docs, here](https://classic.yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison).
 
 Execute migrations to database.
 ```bash
