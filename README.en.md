@@ -2,7 +2,7 @@
 
 This is a GraphQL API that mine [Arcsecond](https://api.arcsecond.io/swagger/) data to find suitable planets to install ion propulsion stations.
 
-*Read this in other languages:* [*Português*](https://github.com/eduwr/backend-challenge/blob/master/README.en.md)
+*Read this in other languages:* [*Português*](https://github.com/eduwr/backend-challenge/blob/master/README.md)
 
 ## Getting Started with docker-compose
 
